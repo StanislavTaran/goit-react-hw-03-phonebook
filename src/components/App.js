@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import ContactForm from './ContactForm/ContactForm';
 import ContactList from './ContactList/ContactList';
 import Filter from './Filter/Filter';
+import TabletShape from './TabletShape/TabletShape';
 
 export default class App extends Component {
   state = {
@@ -86,7 +87,7 @@ export default class App extends Component {
     const filteredContacts = this.applyFilter();
 
     return (
-      <>
+      <TabletShape>
         <ContactForm title="Phonebook" onAddContact={this.addToContacts} />
         {contacts.length > 1 && (
           <Filter hanleFilterChange={this.hanleFilterChange} />
@@ -95,7 +96,7 @@ export default class App extends Component {
           contacts={filteredContacts}
           onRemoveContact={this.removeContact}
         />
-      </>
+      </TabletShape>
     );
   }
 }

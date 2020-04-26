@@ -17,7 +17,7 @@ const ContactItem = ({ contactItem, onRemoveContact }) => {
         onClick={onRemoveContact}
         type="button"
       >
-        Delete contact
+        {null}
       </button>
     </div>
   );
